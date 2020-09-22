@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --color-main: #333;
+  --color-head: rgb(73, 73, 73);
+}
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  color: var(--color-main);
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+main {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 40vw;
+  height: 100vh;
+  font-size: min(2vw, 1rem);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 3.5em;
+  color: var(--color-head);
+}
+
+.error {
+  --color-head: rgba(128, 15, 15, 0.659);
+}
+.result {
+  display: flex;
+  gap: 20px;
+  font-size: 3em;
+}
+
+.result p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result p span {
+  font-size: 0.3em;
+  color: rgb(102, 102, 102);
+}
+
+/* form input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+} */
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  padding: 10px 15px;
+  width: 100%;
+  /* background-color: green; */
+}
+
+form .name {
+  height: 100%;
+  width: 50%;
+}
+form .name input {
+  position: absolute;
+  bottom: 10px;
+  left: 40px;
+  height: 100%;
+  padding: 10px 5px 0px;
+  border: 0;
+  border-bottom: 2px solid rgba(31, 202, 122, 0.26);
+  background-color: transparent;
+  transition: all 0.2s ease-out;
+  font-size: 1.09em;
+  color: #333;
+}
+
+form .name input:focus {
+  outline: none;
+  border-bottom: 2px solid rgba(31, 202, 122, 0.781);
+}
+.span-up {
+  transform: translate(-15px, -18px) scale(0.75);
+  color: rgba(102, 100, 100, 0.61);
+}
+
+form .name label {
+  position: absolute;
+  bottom: 10px;
+  left: 35px;
+  color: rgb(102, 100, 100);
+  font-size: 1em;
+  z-index: 3;
+  background-color: transparent;
+  height: 100%;
+  width: 30%;
+  border: 0;
+}
+
+form .name label span {
+  position: absolute;
+  bottom: 6px;
+  left: 7px;
+  transition: transform 0.3s ease-out, color 0.3s linear 0.25s;
+}
+
+.head span {
+  color: rgba(31, 202, 122, 0.781);
+  font-weight: 300;
+}
+
+form button {
+  background-color: rgba(31, 202, 122, 0.781);
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 5px;
+}
